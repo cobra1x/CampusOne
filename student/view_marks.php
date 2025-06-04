@@ -1,12 +1,9 @@
 <?php
-// Start session
 session_start();
 
-// Include necessary files
 include_once("../includes/config.php");
 include_once("../includes/functions.php");
 
-// Check if student is logged in
 check_login("student");
 
 // Get student ID
@@ -44,7 +41,7 @@ $result = mysqli_query($conn, $sql);
         $exam_subjects = 0;
         
         while($row = mysqli_fetch_assoc($result)): 
-            // If new exam type, show summary of previous exam type
+            // If new exam type,summary of previous exam type
             if ($current_exam != '' && $current_exam != $row['exam_type'] && $exam_subjects > 0) {
                 echo '<tr class="summary-row" style="background-color: #f2f2f2; font-weight: bold;">';
                 echo '<td colspan="2">' . $current_exam . ' Summary</td>';
@@ -79,7 +76,7 @@ $result = mysqli_query($conn, $sql);
         <?php endwhile; ?>
         
         <?php 
-        // Show summary for the last exam type
+        // summary for the last exam type
         if ($exam_subjects > 0) {
             echo '<tr class="summary-row" style="background-color: #f2f2f2; font-weight: bold;">';
             echo '<td colspan="2">' . $current_exam . ' Summary</td>';

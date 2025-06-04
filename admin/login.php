@@ -8,26 +8,22 @@ if (isset($_SESSION['admin'])) {
     exit();
 }
 
-// Include database connection
+// database connection
 include_once("../includes/config.php");
 include_once("../includes/functions.php");
 
-// Process login form
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = sanitize($_POST['username']);
     $password = sanitize($_POST['password']);
     
-    // Simple admin authentication (in real system, you'd use hashed passwords)
-    // Here we assume admin credentials are stored in database
+    // Admin password prestored
     $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($conn, $sql);
     
     if (mysqli_num_rows($result) == 1) {
-        // Login successful
         $_SESSION['admin'] = $username;
         redirect("dashboard.php", "Welcome to Admin Panel", "success");
     } else {
-        // Login failed
         $error = "Invalid username or password";
     }
 }

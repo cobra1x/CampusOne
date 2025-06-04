@@ -1,12 +1,10 @@
 <?php
-// Start session
+
 session_start();
 
-// Include necessary files
 include_once("../includes/config.php");
 include_once("../includes/functions.php");
 
-// Check if student is logged in
 check_login("student");
 
 // Get student department

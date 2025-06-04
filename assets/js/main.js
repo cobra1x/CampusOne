@@ -1,5 +1,3 @@
-// Simple JavaScript functions for the Student Management System
-
 // Function to confirm delete actions
 function confirmDelete(message) {
     return confirm(message || "Are you sure you want to delete this record?");
@@ -47,7 +45,7 @@ function validateUserForm() {
     return true;
 }
 
-// Add event listeners when DOM is loaded
+// Adding event listeners when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Add form validation to login forms
     const loginForm = document.getElementById('loginForm');
@@ -59,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Add form validation to user forms
+    // Adding form validation to user forms
     const userForm = document.getElementById('userForm');
     if (userForm) {
         userForm.addEventListener('submit', function(e) {
@@ -69,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Add delete confirmation to delete buttons
+    // Adding delete confirmation to delete buttons
     const deleteButtons = document.querySelectorAll('.delete-btn');
     deleteButtons.forEach(function(button) {
         button.addEventListener('click', function(e) {

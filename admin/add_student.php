@@ -6,10 +6,9 @@ session_start();
 include_once("../includes/config.php");
 include_once("../includes/functions.php");
 
-// Check if admin is logged in
 check_login("admin");
 
-// Process form submission
+// form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
     $name = sanitize($_POST['name']);
@@ -20,9 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $semester = (int)$_POST['semester'];
     $admission_year = (int)$_POST['admission_year'];
     $username = sanitize($_POST['username']);
-    $password = sanitize($_POST['password']); // In real system, hash this password
+    $password = sanitize($_POST['password']);
     
-    // Insert new student
+    // Inserting new student
     $sql = "INSERT INTO students (name, email, phone, department, roll_number, semester, admission_year, username, password) 
             VALUES ('$name', '$email', '$phone', '$department', '$roll_number', $semester, $admission_year, '$username', '$password')";
     

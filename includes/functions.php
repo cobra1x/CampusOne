@@ -1,5 +1,4 @@
 <?php
-// Common functions for the application
 
 // Function to sanitize user input
 function sanitize($data) {

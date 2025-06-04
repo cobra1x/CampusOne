@@ -2,14 +2,12 @@
 // Start session
 session_start();
 
-// Include necessary files
 include_once("../includes/config.php");
 include_once("../includes/functions.php");
 
-// Check if faculty is logged in
 check_login("faculty");
 
-// Get faculty information
+// Getting faculty info
 $faculty_id = $_SESSION['faculty'];
 $faculty_department = $_SESSION['faculty_department'];
 

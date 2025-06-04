@@ -2,11 +2,9 @@
 // Start session
 session_start();
 
-// Include necessary files
 include_once("../includes/config.php");
 include_once("../includes/functions.php");
 
-// Check if faculty is logged in
 check_login("faculty");
 
 // Get faculty information
@@ -26,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if password should be updated
     $password_sql = "";
     if (!empty($_POST['password'])) {
-        $password = sanitize($_POST['password']); // In real system, hash this password
+        $password = sanitize($_POST['password']);
         $password_sql = ", password = '$password'";
     }
     

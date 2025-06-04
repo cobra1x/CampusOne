@@ -6,19 +6,18 @@ session_start();
 include_once("../includes/config.php");
 include_once("../includes/functions.php");
 
-// Check if admin is logged in
 check_login("admin");
 
-// Check if ID is provided
+// Checking ID
 if (!isset($_GET['id'])) {
     redirect("manage_students.php", "Invalid student ID", "error");
 }
 
 $id = (int)$_GET['id'];
 
-// Process form submission
+// Processing form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
+
     $name = sanitize($_POST['name']);
     $email = sanitize($_POST['email']);
     $phone = sanitize($_POST['phone']);
@@ -28,14 +27,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $admission_year = (int)$_POST['admission_year'];
     $username = sanitize($_POST['username']);
     
-    // Check if password should be updated
+    // checking password requirement
     $password_sql = "";
     if (!empty($_POST['password'])) {
-        $password = sanitize($_POST['password']); // In real system, hash this password
+        $password = sanitize($_POST['password']);
         $password_sql = ", password = '$password'";
     }
     
-    // Update student
+    // Updating student
     $sql = "UPDATE students SET 
             name = '$name', 
             email = '$email', 
@@ -54,7 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Error: " . mysqli_error($conn);
     }
 } else {
-    // Get student data
     $sql = "SELECT * FROM students WHERE id = $id";
     $result = mysqli_query($conn, $sql);
     

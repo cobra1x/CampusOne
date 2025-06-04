@@ -6,7 +6,6 @@ session_start();
 include_once("../includes/config.php");
 include_once("../includes/functions.php");
 
-// Check if faculty is logged in
 check_login("faculty");
 
 // Check if student ID is provided

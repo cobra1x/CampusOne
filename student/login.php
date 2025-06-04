@@ -1,8 +1,6 @@
 <?php
-// Start session
 session_start();
 
-// Check if student is already logged in
 if (isset($_SESSION['student'])) {
     header("Location: dashboard.php");
     exit();

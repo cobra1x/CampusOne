@@ -2,7 +2,7 @@
 // Start session
 session_start();
 
-// Check if faculty is already logged in
+// Checking if faculty is already logged in
 if (isset($_SESSION['faculty'])) {
     header("Location: dashboard.php");
     exit();

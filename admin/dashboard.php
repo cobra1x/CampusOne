@@ -2,14 +2,13 @@
 // Start session
 session_start();
 
-// Include necessary files
+// Including necessary files
 include_once("../includes/config.php");
 include_once("../includes/functions.php");
 
-// Check if admin is logged in
 check_login("admin");
 
-// Get counts for dashboard
+// Geting counts for dashboard
 $sql_faculty = "SELECT COUNT(*) as count FROM faculty";
 $result_faculty = mysqli_query($conn, $sql_faculty);
 $faculty_count = mysqli_fetch_assoc($result_faculty)['count'];

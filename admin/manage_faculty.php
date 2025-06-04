@@ -2,14 +2,12 @@
 // Start session
 session_start();
 
-// Include necessary files
 include_once("../includes/config.php");
 include_once("../includes/functions.php");
 
-// Check if admin is logged in
 check_login("admin");
 
-// Delete faculty if requested
+// Delete faculty
 if (isset($_GET['delete'])) {
     $id = (int)$_GET['delete'];
     $sql = "DELETE FROM faculty WHERE id = $id";
@@ -21,7 +19,7 @@ if (isset($_GET['delete'])) {
     }
 }
 
-// Get all faculty members
+// Geting all faculty members
 $sql = "SELECT * FROM faculty ORDER BY name";
 $result = mysqli_query($conn, $sql);
 ?>

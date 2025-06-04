@@ -6,10 +6,9 @@ session_start();
 include_once("../includes/config.php");
 include_once("../includes/functions.php");
 
-// Check if admin is logged in
 check_login("admin");
 
-// Check if ID is provided
+// Checking ID 
 if (!isset($_GET['id'])) {
     redirect("manage_faculty.php", "Invalid faculty ID", "error");
 }
@@ -18,7 +17,6 @@ $id = (int)$_GET['id'];
 
 // Process form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
     $name = sanitize($_POST['name']);
     $email = sanitize($_POST['email']);
     $phone = sanitize($_POST['phone']);
@@ -26,14 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $education = sanitize($_POST['education']);
     $username = sanitize($_POST['username']);
     
-    // Check if password should be updated
     $password_sql = "";
     if (!empty($_POST['password'])) {
-        $password = sanitize($_POST['password']); // In real system, hash this password
+        $password = sanitize($_POST['password']);
         $password_sql = ", password = '$password'";
     }
     
-    // Update faculty
+    // Updating faculty
     $sql = "UPDATE faculty SET 
             name = '$name', 
             email = '$email', 
