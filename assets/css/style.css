@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f8f8f8;
+    background-color: #EDF2FB;
     color: #333;
 }
 
@@ -24,7 +24,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #60d0f5;
+    background-color: #C1D3FE;
     color: rgb(10, 3, 3);
     padding: 15px 20px;
     border-radius: 5px;
@@ -80,7 +80,7 @@ main {
 }
 
 .login-box h3 {
-    color: #e60000;
+    color: #0077B6;
     margin-bottom: 10px;
 }
 
@@ -91,16 +91,18 @@ main {
 
 .login-btn {
     display: inline-block;
-    background-color: #e60000;
-    color: white;
+    background-color: #07BEB8;
+    color: whitesmoke;
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 3px;
+    font-weight: 600;
     transition: background-color 0.3s;
 }
 
 .login-btn:hover {
-    background-color: #c50000;
+    background-color: #0077B6;
+    font-weight: 800;
 }
 
 /* Form Styles */
@@ -134,7 +136,7 @@ main {
 .btn {
     display: inline-block;
     padding: 8px 15px;
-    background-color: #e60000;
+    background-color: #07BEB8;
     color: white;
     border: none;
     border-radius: 3px;
@@ -144,11 +146,11 @@ main {
 }
 
 .btn:hover {
-    background-color: #c50000;
+    background-color: #0077B6;
 }
 
 .back-btn {
-    background-color: #666;
+    background-color: #5f4e4e;
 }
 
 .back-btn:hover {
@@ -170,7 +172,7 @@ main {
 }
 
 .data-table th {
-    background-color: #e60000;
+    background-color: #003459;
     color: white;
 }
 
@@ -201,7 +203,7 @@ main {
 }
 
 .card h3 {
-    color: #e60000;
+    color: #003459;
     margin-bottom: 10px;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
@@ -233,7 +235,7 @@ main {
 }
 
 .profile-info h2 {
-    color: #e60000;
+    color: #003459;
     margin-bottom: 20px;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;

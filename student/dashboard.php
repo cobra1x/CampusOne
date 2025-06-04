@@ -58,10 +58,10 @@ $marks_count = mysqli_fetch_assoc($result_marks)['count'];
     </div>
 </div>
 
-<!-- <div class="card">
+<div class="card">
     <h3>Welcome, <?php echo $_SESSION['student_name']; ?></h3>
     <p>You are logged in as a student in the <?php echo $student_department; ?> department.</p>
-    <p>From this dashboard, you can view your profile information, check notifications from faculty, view your exam marks, and see faculty details.</p>
-</div> -->
+    <p>Here, you can view your profile information, check notifications from faculty, view your exam marks, and see faculty details.</p>
+</div>
 
 <?php include_once("../includes/footer.php"); ?>

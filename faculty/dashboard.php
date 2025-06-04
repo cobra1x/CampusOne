@@ -30,7 +30,7 @@ $notification_count = mysqli_fetch_assoc($result_notifications)['count'];
 <div class="dashboard-cards">
     <div class="card">
         <h3>My Profile</h3>
-        <p>View and update your profile information</p>
+        <p>View and update your profile</p>
         <a href="profile.php" class="btn">View Profile</a>
     </div>
     
@@ -53,10 +53,10 @@ $notification_count = mysqli_fetch_assoc($result_notifications)['count'];
     </div>
 </div>
 
-<!-- <div class="card">
+<div class="card">
     <h3>Welcome, <?php echo $_SESSION['faculty_name']; ?></h3>
     <p>You are logged in as a faculty member of the <?php echo $faculty_department; ?> department.</p>
-    <p>From this dashboard, you can manage your profile, view students in your department, send notifications, and add exam marks.</p>
-</div> -->
+    <p>Here, you can manage your profile, view students in your department, send notifications, and add exam marks.</p>
+</div>
 
 <?php include_once("../includes/footer.php"); ?>

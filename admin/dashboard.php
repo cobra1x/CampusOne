@@ -36,7 +36,7 @@ $student_count = mysqli_fetch_assoc($result_students)['count'];
     </div>
 </div>
 
-<!-- <div class="card">
+<div class="card">
     <h3>System Information</h3>
     <p>Welcome to the admin panel. From here you can manage faculty and student accounts.</p>
     <p>As an administrator, you have the ability to:</p>
@@ -45,6 +45,6 @@ $student_count = mysqli_fetch_assoc($result_students)['count'];
         <li>Create, update, and delete student accounts</li>
         <li>View system statistics</li>
     </ul>
-</div> -->
+</div>
 
 <?php include_once("../includes/footer.php"); ?>
